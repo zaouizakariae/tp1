@@ -27,7 +27,7 @@ else:
 # on demande a l utilisateur d entrer le prix sans taxes
 n = float(input("entrer le prix hors taxes : "))
 # on calcule la valeur des taxes
-taxes = (n*18, 6)/100
+taxes = (n*18.6)/100
 # on calcule le prix finale
 pf = n+taxes
 # on etablit une remise
@@ -38,4 +38,16 @@ elif pf >= 2000 & pf < 5000 :
 elif pf >= 5000 :
     pf -= (pf*5) / 100
 print("le prix a payer est ", pf)
+```
+## exercice 4
+```python
+# on demande a l utilisateur d entrer le nombre de photocopie
+n = float(input("entrer le nombre de photocopies : "))
+if n <= 10:
+    n = n*0.5
+elif n > 10 & n <= 30:
+    n = 10*0.5 + (n-10)*0.3
+elif n > 30:
+    n = 10*0.5 + 20*0.3 + (n-30)*0.2
+print("la facture : ", n, "DH")
 ```
